@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+}
+
+// jcenter 上传配置
+publish {
+    artifactId = 'promise'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+//    uploadName = rootProject.uploadName
+    publishVersion = "0.0.1"
+    desc = "android promise lib"
+    website = 'https://github.com/walid1992/promise'
+    licences = rootProject.licences
+}
