@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/github/release/walid1992/JavaPromise.svg)](https://github.com/walid1992/JavaPromise/releases)  [![GitHub issues](https://img.shields.io/github/issues/walid1992/JavaPromise.svg)](https://github.com/walid1992/JavaPromise/issues)
+
 # Java Promise
 
 -----
@@ -6,21 +8,11 @@ Java Promise 方式。
 
 ## Usage
 
-在项目根目录 build.gradle 中加入：
-
-```
-allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
 在工程目录 build.gradle 中加入：
 
 ```
 dependencies {
-    implementation 'com.github.walid1992:JavaPromise:v1.0.0'
+    implementation 'com.walid:promise:1.0.0'
 }
 ```
 

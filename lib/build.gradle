@@ -1,8 +1,18 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    artifactId = 'promise'
+    userOrg = 'walid1992'
+    groupId = 'com.walid'
+    publishVersion = "1.0.0"
+    desc = "android promise lib"
+    website = 'https://github.com/walid1992/JavaPromise'
+}
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.2"
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 15
