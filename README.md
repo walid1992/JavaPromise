@@ -1,11 +1,32 @@
-package com.walid.promise;
+# Java Promise
 
-import java.util.Timer;
-import java.util.TimerTask;
+-----
 
-public class main {
+Java Promise 方式。
 
-    public static void main(String[] args) {
+## Usage
+
+在项目根目录 build.gradle 中加入：
+
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+在工程目录 build.gradle 中加入：
+
+```
+dependencies {
+    implementation 'com.github.walid1992:JavaPromise:v1.0.0.beta'
+}
+```
+
+## 示例
+
+```
         Promise<String, Integer> promise = new Promise<>((resolve, reject) -> {
             System.out.println("BEGIN");
             new Timer().schedule(new TimerTask() {
@@ -26,5 +47,8 @@ public class main {
             System.out.println("then 3 : " + s);
             promise.reject.run(-1);
         }).fail(integer -> System.out.println("main fail"));
-    }
-}
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.

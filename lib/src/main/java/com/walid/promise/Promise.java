@@ -1,9 +1,9 @@
-package com.syswin.toon.appstub.event.promise;
+package com.walid.promise;
 
-import com.syswin.toon.appstub.event.promise.interfaces.IFunc;
-import com.syswin.toon.appstub.event.promise.interfaces.IPromiseInitializer;
-import com.syswin.toon.appstub.event.promise.interfaces.IReject;
-import com.syswin.toon.appstub.event.promise.interfaces.IResolve;
+import com.walid.promise.interfaces.IFunc;
+import com.walid.promise.interfaces.IPromiseInitializer;
+import com.walid.promise.interfaces.IReject;
+import com.walid.promise.interfaces.IResolve;
 
 /**
  * Author   : walid
@@ -54,9 +54,7 @@ public class Promise<TResolveData, TRejectData> {
                 }
                 break;
             case State.REJECT:
-                System.out.println("fail");
                 if (this.fail != null) {
-                    System.out.println("fail != null");
                     this.fail.run(rejectError);
                 } else {
                     Promise<Object, TRejectData> next = this.next;

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.syswin.toon.appstub.event">
+    package="com.walid.promise.appstub.event">
 
     <application
         android:allowBackup="true"

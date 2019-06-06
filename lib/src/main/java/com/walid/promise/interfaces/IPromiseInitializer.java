@@ -1,4 +1,4 @@
-package com.syswin.toon.appstub.event.promise.interfaces;
+package com.walid.promise.interfaces;
 
 /**
  * Author   : walid

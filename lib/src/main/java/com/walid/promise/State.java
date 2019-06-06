@@ -1,4 +1,4 @@
-package com.syswin.toon.appstub.event.promise;
+package com.walid.promise;
 
 import android.support.annotation.IntDef;
 
